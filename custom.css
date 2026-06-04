@@ -47,6 +47,8 @@
 
 [data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1) {
   color: #FFFFFF !important;
+  font-size: 8px !important;
+  line-height: 8px !important;
   box-shadow:
     0 18px 42px rgba(0, 0, 0, 0.36),
     0 0 28px rgb(78 164 181 / 32%),
@@ -99,9 +101,8 @@
   [data-mj="widget-banner-link"] img {
     height: 100% !important;
   }
-}
 
-[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1) span {
-  font-size: 5px !important;
-  line-height: 5px !important;
+a.sl-navlink {
+  font-size: 8px !important;
+  line-height: 8px !important;
 }
