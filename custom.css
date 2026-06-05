@@ -125,3 +125,11 @@ aside a,
 .side-menu a {
   font-size: 13px !important;
 }
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i {
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a {
+  flex: 0 0 auto !important;
+}
