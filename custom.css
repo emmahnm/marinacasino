@@ -60,8 +60,8 @@
 ======================= */
 [data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1) {
   color: #FFFFFF !important;
-  font-size: 8px !important;
-  line-height: 8px !important;
+  font-size: 11px !important;
+  line-height: 11px !important;
 
   box-shadow:
     0 18px 42px rgba(0, 0, 0, 0.36),
@@ -133,7 +133,7 @@
   }
 
   a.sl-navlink {
-    font-size: 11px !important;
-    line-height: 11px !important;
+    font-size: 8px !important;
+    line-height: 8px !important;
   }
 }
