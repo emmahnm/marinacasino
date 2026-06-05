@@ -34,44 +34,19 @@
   padding: 11px 6px !important;
 }
 
-/* RESET */
+/* RESET (TEMİZ, ORDER YOK) */
 [data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a {
   flex: 1 !important;
+  min-width: 0 !important;
+
   position: relative !important;
+
   display: flex !important;
-  align-items: center !important;
   justify-content: center !important;
+  align-items: center !important;
 }
 
-/* =======================
-   HOME CENTER FIX (ANA ÇÖZÜM)
-   ⚠️ EN ÖNEMLİ KISIM
-======================= */
-
-/* Eğer data-nav ekleyebilirsen BU KULLANILACAK */
-[data-nav="home"] {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) translateY(-2px) scale(1.15) !important;
-
-  z-index: 20 !important;
-
-  min-width: 56px !important;
-  min-height: 56px !important;
-
-  border-radius: 10px !important;
-}
-
-/* Eğer data-nav EKLEYEMEZSEN fallback (şu an senin sırana göre 4. item) */
-[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(4) {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) translateY(-2px) scale(1.15) !important;
-
-  z-index: 20 !important;
-}
-
-/* ACTIVE STATE */
+/* ACTIVE ITEM (GENEL) */
 [data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a.active-link,
 [data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a[aria-current="page"] {
   filter: brightness(1.08) saturate(1.08) !important;
@@ -83,7 +58,9 @@
   border-radius: 0 !important;
 }
 
-/* MOBILE FIX */
+/* =======================
+   MOBILE FIX
+======================= */
 @media (max-width: 768px) {
   [data-mj="widget-banner-link"] img {
     height: 100% !important;
