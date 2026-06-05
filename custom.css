@@ -10,8 +10,8 @@
   overflow: hidden !important;
 
   display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+  align-items: stretch !important;
+  justify-content: space-evenly !important;
 
   border-top: 1px solid rgba(17, 105, 161, 1) !important;
   border-radius: 3px !important;
@@ -31,24 +31,56 @@
   backdrop-filter: blur(16px) saturate(1.35) !important;
   -webkit-backdrop-filter: blur(16px) saturate(1.35) !important;
 
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease !important;
+
   padding: 11px 6px !important;
 }
 
-/* RESET (TEMİZ, ORDER YOK) */
+/* RESET */
 [data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a {
+  order: unset !important;
   flex: 1 !important;
   min-width: 0 !important;
-
-  position: relative !important;
-
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
 }
 
-/* ACTIVE ITEM (GENEL) */
-[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a.active-link,
-[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a[aria-current="page"] {
+/* ORDER */
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1) { order: 1 !important; }
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(2) { order:  !important; }
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(3) { order: 2 !important; }
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(4) { order: 3 !important; }
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(5) { order: 5 !important; }
+
+/* ACTIVE ITEM */
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1) {
+  color: #FFFFFF !important;
+  font-size: 8px !important;
+  line-height: 8px !important;
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.36),
+    0 0 28px rgb(78 164 181 / 32%),
+    0 0 48px rgba(70, 130, 255, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+
+  border-color: rgb(75 120 165 / 62%) !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-width: 52px !important;
+  min-height: 52px !important;
+
+  border-radius: 9px !important;
+
+  transform: translateY(-2px) scale(1.15) !important;
+
+  z-index: 10 !important;
+}
+
+/* ACTIVE STATE */
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1).active-link,
+[data-mj="bottom-nav"] .app-ltr-idt7iu .app-ltr-ja3k2i > a:nth-of-type(1)[aria-current="page"] {
   filter: brightness(1.08) saturate(1.08) !important;
 }
 
@@ -68,7 +100,8 @@
 }
 
 /* =======================
-   FOOTER + LEGAL + SIDEBAR
+   FIX: FOOTER + LEGAL + SIDEBAR
+   (EN KRİTİK KISIM)
 ======================= */
 footer,
 footer a,
@@ -83,9 +116,11 @@ footer li {
   font-size: 13px !important;
 }
 
+/* sidebar / yan menü (generic güvenli override) */
 aside,
 aside a,
 .sidebar,
+.sidebar a,
 .side-menu,
 .side-menu a {
   font-size: 13px !important;
